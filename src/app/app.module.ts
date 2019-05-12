@@ -2,15 +2,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { ListItemComponent } from './list-item/list-item.component';
+import { ToDoService } from './list-item/service/todoservice';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListItemComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: ToDoService,
+      useClass: ToDoService
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

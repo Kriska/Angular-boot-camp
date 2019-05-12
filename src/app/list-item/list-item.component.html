@@ -1,0 +1,5 @@
+<div class="list_items">
+<span> {{ todo.title }} </span>
+<button (click)="toggleCompletedHandler()">{{todo.complete ? 'undo' : 'check'}}</button>
+<button (click)="toggleRemoveHandler()"> Delete </button>
+</div>
