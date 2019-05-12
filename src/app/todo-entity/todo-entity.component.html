@@ -1,0 +1,4 @@
+<p>Add new item in {{title}} : </p>
+<input #todoInput type="text">
+<button (click)="toggleAddHandler(todoInput)"> Add </button>
+<p *ngIf=" message != '' "> {{message}}</p>

@@ -1,0 +1,11 @@
+<div id="to-do-items">
+  <div *ngIf="todos.length==0"> List is empty</div>
+  <ul *ngIf="todos.length > 0">
+  <li *ngFor="let todo of todos; let i = index" [ngClass]="{'complete': todo.complete, 'uncomplete': !todo.complete}">
+  <app-list-item [todo]="todo" (toggle)="toggleCompletedHandler(i)"
+  (remove)="toggleRemoveHandler(i, $event)"></app-list-item>
+  </li>
+  </ul>
+  </div>
+
+<p *ngIf=" message != '' "> {{message}}</p>

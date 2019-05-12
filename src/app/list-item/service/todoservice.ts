@@ -23,7 +23,7 @@ export class ToDoService {
     this.todos[index].complete= !this.todos[index].complete;
   }
 
-  toggleRemoveHandler(i: number, deleted: todos) {
+  toggleRemoveHandler(i: number, deleted: any) {
     //this.todos = this.todos.filter((el, index) => index != i);
     this.todos.splice(i, 1);
     this.message = deleted.title.concat('was deleted');

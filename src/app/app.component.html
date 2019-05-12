@@ -6,17 +6,9 @@
   <input #titleInput [value]="title" type="text">
   <button (click)="changeTitleHandler(titleInput)">Change Title</button>
 
-  <div id="to-do-items">
-    <div *ngIf="todos.length==0"> List is empty</div>
-    <ul *ngIf="todos.length > 0">
-      <li *ngFor="let todo of todos; let i = index" [ngClass]="{'complete': todo.complete, 'uncomplete': !todo.complete}">
-        <app-list-item [todo]="todo" (toggle)="toggleCompletedHandler(i)"
-                       (remove)="toggleRemoveHandler(i, $event)"></app-list-item>
-      </li>
-    </ul>
-  </div>
-  <p>Add new item in {{title}} : </p>
-  <input #todoInput type="text">
-  <button (click)="toggleAddHandler(todoInput)"> Add </button>
-  <p *ngIf=" message != '' "> {{message}}</p>
+<nav>
+  <a routerLink="todos"> To Do List</a><br>
+  <a routerLink="add"> Add ToDo</a>
+</nav>
+<router-outlet></router-outlet>
 </div>
