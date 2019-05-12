@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ListItemComponent } from './list-item/list-item.component';
@@ -9,6 +10,8 @@ import { TodoEntityComponent } from './todo-entity/todo-entity.component';
 
 import { AppRoutingModule } from './app_routing.modul';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ListItemComponent,
     TodoListComponent,
     TodoEntityComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     {

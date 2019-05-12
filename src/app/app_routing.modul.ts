@@ -2,6 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {TodoListComponent } from './todo-list/todo-list.component';
 import {TodoEntityComponent } from './todo-entity/todo-entity.component';
 import {NotFoundComponent } from './not-found/not-found.component';
+import {LoginComponent } from './login/login.component';
 
 const routes: Routes = [
     {
@@ -18,9 +19,13 @@ const routes: Routes = [
     component: TodoEntityComponent
     },
     {
+    path:'login',
+    component: LoginComponent
+    },
+    {
     path: '**',
     component: NotFoundComponent
-    },
+    }
 
 ];
 

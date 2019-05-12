@@ -42,4 +42,8 @@ export class AppComponent implements DoCheck {
     this.renderer.setProperty(this.todoInput.nativeElement, 'value', '');
   }
 
+  loginHandler() {
+    console.log('test');
+  }
+
 }

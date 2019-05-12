@@ -1,0 +1,13 @@
+<form #loginForm="ngForm">
+  <div>
+   <label for="email"> Email></label>
+    <input #emailInput="ngModel" for="email" id="email" name="email" ngModel required>
+    <div *ngIf="!emailInput.valid && emailInput.untouched">Valid Email is required</div>
+  </div>
+  <div>
+    <label for="password"> Password</label>
+    <input type="password" id="password" name="password" ngModel required>
+  </div>
+  <button type="button" [disabled]="!loginForm.valid" (click)="loginHandler()">Login</button>
+
+</form>
